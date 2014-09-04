@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/quartz221"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commonsnet"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mybatis"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/junit48"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/digester33"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/sqlserver"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javaee"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

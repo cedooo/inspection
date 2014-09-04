@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="cn/com/dhcc/inspection/db/db-config.properties"></properties>
+	<environments default="devSQLServer2008">
+		<environment id="devSQLServer2008">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+			      <property name="driver" value="${debug_db_driver}"/>
+			      <property name="url" value="${debug_db_url}"/>
+			      <property name="username" value="${debug_db_username}"/>
+			      <property name="password" value="${debug_db_password}"/>
+			</dataSource>
+		</environment>
+		<environment id="cgnSQLServer2008">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+			      <property name="driver" value="${db_driver}"/>
+			      <property name="url" value="${db_url}"/>
+			      <property name="username" value="${db_username}"/>
+			      <property name="password" value="${db_password}"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="cn/com/dhcc/inspection/collector/cnf/sqlmap/cnf-sqlmap.xml" />
+		<!-- <mapper resource="cn/com/dhcc/rp/connection/po/connection-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/event/po/event-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/st/event-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/job/po/post-mapper.xml" />
+
+		<mapper resource="cn/com/dhcc/rp/persistence/po/comm-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/persistence/po/air-condition-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/persistence/po/comm-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/persistence/po/state-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/persistence/po/ups-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/persistence/po/power-box-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/persistence/po/temhum-mapper.xml" />
+		<mapper resource="cn/com/dhcc/rp/persistence/po/leakwater-mapper.xml" /> -->
+	</mappers>
+</configuration>

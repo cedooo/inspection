@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.dhcc.inspection.analysis.result">
+	<resultMap type="cn.com.dhcc.inspection.analysis.result.AnalysisResultDetails" id="AnalysisResultDetailsMap">
+		<result property="protoData" column="N_COLL_ID" />
+		<result property="info" column="VC_COLL_IP" />
+		<result property="note" column="N_COLL_PORT" />
+		<result property="normal" column="VC_COLL_USR" />
+	</resultMap>
+
+	<select id="selectAll" resultMap="CollConfMap">
+		SELECT N_COLL_ID
+		,VC_COLL_IP
+		,N_COLL_PORT
+		,VC_COLL_USR
+		,VC_COLL_PASSWD
+		,VC_COLL_LOCAL
+		,VC_COLL_REMOTE
+		,VC_COLL_ENCODE
+		,VC_COLL_LOG_FILES
+		FROM T_INSPECTION_COLL_CONF
+		WHERE DT_DEL_TIME IS NULL
+	</select>
+
+</mapper>
